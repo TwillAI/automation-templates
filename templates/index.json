@@ -5,6 +5,7 @@
     "weekly-dependency-updates.md",
     "linear-sprint-automation.md",
     "notion-roadmap-to-code.md",
-    "stale-pr-cleanup.md"
+    "stale-pr-cleanup.md",
+    "dependabot-pr-validation.md"
   ]
 }
