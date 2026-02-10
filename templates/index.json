@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "templates": [
+    "github-issue-triage.md",
+    "weekly-dependency-updates.md",
+    "linear-sprint-automation.md",
+    "notion-roadmap-to-code.md",
+    "stale-pr-cleanup.md"
+  ]
+}
