@@ -1,6 +1,7 @@
 {
   "version": 1,
   "templates": [
+    "sentry-error-triage.md",
     "github-issue-triage.md",
     "weekly-dependency-updates.md",
     "linear-sprint-automation.md",
