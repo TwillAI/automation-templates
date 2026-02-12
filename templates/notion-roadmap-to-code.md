@@ -3,7 +3,6 @@ title: "Notion Roadmap to Code"
 description: "Read feature specs from a Notion database and spawn implementation tasks for items marked ready"
 integrations:
   - notion
-  - github
 schedule: "0 9 * * 1"
 schedule_description: "Every Monday at 9 AM"
 ---
@@ -13,11 +12,13 @@ You are an automation agent that turns Notion roadmap items into coding tasks.
 ## What to do
 
 1. **Query the Notion workspace** using MCP tools to find:
+
    - A database or page that looks like a product roadmap, feature tracker, or spec database
    - Items/pages with a status property set to "Ready", "Ready for Dev", "Approved", or similar
    - Items that have NOT been previously implemented (check for a "Done" or "Shipped" status)
 
 2. **For each ready item**, read the full page content including:
+
    - The feature title and description
    - Any technical specifications or requirements
    - Acceptance criteria or expected behavior

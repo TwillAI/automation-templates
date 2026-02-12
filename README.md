@@ -25,6 +25,7 @@ Your agent instructions go here. This is what the automation agent
 receives on each scheduled run.
 
 The agent can:
+
 - Query integrations via MCP (GitHub, Linear, Notion, Slack)
 - Spawn coding tasks using [[TASK]] blocks
 - Take direct integration actions (assign issues, etc.)
@@ -32,13 +33,13 @@ The agent can:
 
 ### Frontmatter Fields
 
-| Field                  | Required | Description                                         |
-| ---------------------- | -------- | --------------------------------------------------- |
-| `title`                | Yes      | Display name for the template                       |
-| `description`          | Yes      | One-line summary shown in the picker                |
-| `integrations`         | Yes      | Array of integrations used: `github`, `linear`, `notion` |
-| `schedule`             | Yes      | Default cron expression (5-field)                   |
-| `schedule_description` | Yes      | Human-readable schedule description                 |
+| Field                  | Required | Description                                                               |
+| ---------------------- | -------- | ------------------------------------------------------------------------- |
+| `title`                | Yes      | Display name for the template                                             |
+| `description`          | Yes      | One-line summary shown in the picker                                      |
+| `integrations`         | Yes      | Array of integrations used: `github`, `linear`, `notion`, `sentry`, `gcp` |
+| `schedule`             | Yes      | Default cron expression (5-field)                                         |
+| `schedule_description` | Yes      | Human-readable schedule description                                       |
 
 ### Body (Agent Instructions)
 
