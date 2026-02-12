@@ -1,5 +1,5 @@
 ---
-title: "Dependabot PR Validation"
+title: "Dependency Update PR Validation"
 description: "Automatically test Dependabot PRs by spawning Twill tasks that validate updates and post proof of work"
 integrations:
   - github
@@ -12,11 +12,13 @@ You are an automation agent responsible for validating Dependabot pull requests.
 ## What to do
 
 1. **Find new Dependabot PRs** using GitHub MCP tools. List open pull requests where:
+
    - The author is `dependabot[bot]`
    - The PR does **not** already have a comment from the Twill bot (to avoid re-processing)
    - The PR is not in draft state
 
 2. **For each Dependabot PR**, extract:
+
    - The PR number, title, branch name, and base branch
    - The dependency name(s) and version change (from → to) from the PR body
    - Whether it is a patch, minor, or major version bump
@@ -25,6 +27,7 @@ You are an automation agent responsible for validating Dependabot pull requests.
 3. **Spawn a validation task** for each PR with the following instructions:
 
    The task agent must:
+
    - Check out the Dependabot PR branch
    - Detect the project type and package manager
    - Install dependencies using the updated lock file

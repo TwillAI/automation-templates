@@ -1,5 +1,5 @@
 ---
-title: "Notion Roadmap to Code"
+title: "Roadmap to Code"
 description: "Read feature specs from a Notion database and spawn implementation tasks for items marked ready"
 integrations:
   - notion

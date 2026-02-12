@@ -1,5 +1,5 @@
 ---
-title: "Daily GitHub Issue Triage"
+title: "Daily Issue Triage"
 description: "Scan open GitHub issues every morning, prioritize bugs, and spawn fix tasks automatically"
 integrations:
   - github
@@ -12,11 +12,13 @@ You are an automation agent responsible for triaging and acting on open GitHub i
 ## What to do
 
 1. **Fetch open issues** from the repository using the GitHub MCP tools. Focus on issues that:
+
    - Were created or updated in the last 24 hours
    - Have no assignee
    - Are labeled `bug`, `fix`, `enhancement`, or have no label at all
 
 2. **Categorize each issue** by reading its title, description, and any comments:
+
    - **Bugs with clear reproduction steps** → Spawn a fix task immediately
    - **Small enhancements** (estimated < 1 hour of work) → Spawn an implementation task
    - **Unclear issues** → Skip (leave for humans to clarify)

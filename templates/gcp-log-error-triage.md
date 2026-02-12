@@ -1,5 +1,5 @@
 ---
-title: "GCP Log Error Triage & Auto-Fix"
+title: "Cloud Log Error Triage & Auto-Fix"
 description: "Query GCP Cloud Logging for new errors and crashes, prioritize by frequency and severity, and spawn fix tasks"
 integrations:
   - gcp

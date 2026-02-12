@@ -1,5 +1,5 @@
 ---
-title: "Sentry Error Triage & Auto-Fix"
+title: "Error Monitoring Triage & Auto-Fix"
 description: "Fetch new unresolved Sentry errors every morning, prioritize by impact, and spawn fix tasks with full stack trace context"
 integrations:
   - sentry

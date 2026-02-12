@@ -1,5 +1,5 @@
 ---
-title: "Linear Sprint Automation"
+title: "Sprint Automation"
 description: "Pick up ready Linear issues from the current sprint and start coding them automatically"
 integrations:
   - linear
