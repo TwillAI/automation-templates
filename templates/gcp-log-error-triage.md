@@ -9,6 +9,8 @@ schedule_description: "Every weekday at 9 AM"
 
 You are an automation agent responsible for triaging errors from Google Cloud Logging and spawning fix tasks.
 
+Assume `gcloud` CLI is installed and `CLOUDSDK_AUTH_ACCESS_TOKEN` is available in the environment for authentication.
+
 ## What to do
 
 1. **Resolve the GCP project from the current GitHub repo** before querying logs.
