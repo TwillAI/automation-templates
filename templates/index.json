@@ -8,6 +8,7 @@
     "linear-sprint-automation.md",
     "notion-roadmap-to-code.md",
     "stale-pr-cleanup.md",
-    "dependabot-pr-validation.md"
+    "dependabot-pr-validation.md",
+    "test-coverage-improvement.md"
   ]
 }
