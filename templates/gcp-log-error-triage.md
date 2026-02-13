@@ -15,22 +15,21 @@ Assume `gcloud` CLI is installed and `CLOUDSDK_AUTH_ACCESS_TOKEN` is available i
 
 1. **Resolve the GCP project from the current GitHub repo** before querying logs.
 
-2. **Query Cloud Logging** using the `gcloud logging read` CLI in the resolved project. Fetch log entries from the last 24 hours matching:
+2. **Query Cloud Logging** using the `gcloud logging read` CLI in the resolved project. Fetch log entries since the last time you ran matching:
 
    - Severity `ERROR` or `CRITICAL`
    - From application services only (Cloud Run, GKE workloads, Cloud Functions, App Engine) — skip infrastructure-level logs (load balancer 5xx with no app trace, GCE system events, etc.)
    - Example query:
      ```
-     gcloud logging read 'severity>=ERROR AND timestamp>="<24h-ago>"' --format=json --limit=500
+     gcloud logging read 'severity>=ERROR AND timestamp>="<since-last-run>"' --format=json --limit=500
      ```
    - Group entries by error message and stack trace fingerprint to identify distinct issues
 
 3. **Prioritize issues** by sorting on these signals (highest priority first):
 
    - Severity (`CRITICAL` > `ERROR`)
-   - Frequency (number of occurrences in the last 24 hours)
    - Breadth (number of distinct services or endpoints affected)
-   - Whether the error is new (first seen in the last 24 hours) vs. recurring
+   - Whether the error is new (first seen since the last time you ran) vs. recurring
 
 4. **Evaluate each issue for fixability** by reading the log entries:
 
@@ -48,7 +47,6 @@ Assume `gcloud` CLI is installed and `CLOUDSDK_AUTH_ACCESS_TOKEN` is available i
    - The request path or trigger (HTTP endpoint, Pub/Sub topic, Cloud Scheduler job, etc.)
    - Sample `httpRequest` fields if available (method, URL, status, latency)
    - Relevant labels and resource metadata (`service_name`, `revision_name`, `function_name`)
-   - Error frequency and time window (e.g., "342 occurrences in the last 24 hours")
    - A Cloud Logging filter query so the fix agent or reviewer can look up entries in the GCP Console
    - If the error started after a recent deploy, include the deploy timestamp and commit SHA
    - The branch should be named after the error (e.g., `fix/cloud-run-null-pointer`)

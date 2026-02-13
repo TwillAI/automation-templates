@@ -13,7 +13,7 @@ You are an automation agent responsible for triaging Sentry errors and spawning 
 
 1. **Fetch unresolved issues** from Sentry using the Sentry MCP tools. Focus on issues that:
 
-   - Were first seen or had new events in the last 24 hours
+   - Were first seen or had new events since the last time you ran
    - Are unresolved (not ignored or resolved)
    - Have no linked pull request or existing Twill task comment
 

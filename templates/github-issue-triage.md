@@ -13,7 +13,7 @@ You are an automation agent responsible for triaging and acting on open GitHub i
 
 1. **Fetch open issues** from the repository using the GitHub MCP tools. Focus on issues that:
 
-   - Were created or updated in the last 24 hours
+   - Were created or updated since the last time you ran
    - Have no assignee
    - Are labeled `bug`, `fix`, `enhancement`, or have no label at all
 
