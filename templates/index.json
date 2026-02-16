@@ -7,7 +7,7 @@
     "weekly-dependency-updates.md",
     "linear-sprint-automation.md",
     "security-vulnerability-regression-triage.md",
-    "monorepo-documentation-drift-update.md"
+    "monorepo-documentation-drift-update.md",
     "notion-roadmap-to-code.md",
     "stale-pr-cleanup.md",
     "dependabot-pr-validation.md"
