@@ -4,6 +4,7 @@
     "sentry-error-triage.md",
     "github-issue-triage.md",
     "gcp-log-error-triage.md",
+    "aws-log-error-triage.md",
     "weekly-dependency-updates.md",
     "linear-sprint-automation.md",
     "security-vulnerability-regression-triage.md",
